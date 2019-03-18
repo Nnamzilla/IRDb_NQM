@@ -15,6 +15,8 @@
 		53B1A8B5223FCF0C001C93F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53B1A8B3223FCF0C001C93F9 /* LaunchScreen.storyboard */; };
 		53B1A8C0223FCF0C001C93F9 /* IRDb_NQMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B1A8BF223FCF0C001C93F9 /* IRDb_NQMTests.swift */; };
 		53B1A8CB223FCF0C001C93F9 /* IRDb_NQMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B1A8CA223FCF0C001C93F9 /* IRDb_NQMUITests.swift */; };
+		53B1A8D9223FD35C001C93F9 /* MovieDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B1A8D8223FD35C001C93F9 /* MovieDataController.swift */; };
+		53B1A8DB223FD41B001C93F9 /* MovieDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B1A8DA223FD41B001C93F9 /* MovieDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		53B1A8C6223FCF0C001C93F9 /* IRDb_NQMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRDb_NQMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53B1A8CA223FCF0C001C93F9 /* IRDb_NQMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRDb_NQMUITests.swift; sourceTree = "<group>"; };
 		53B1A8CC223FCF0C001C93F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53B1A8D8223FD35C001C93F9 /* MovieDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataController.swift; sourceTree = "<group>"; };
+		53B1A8DA223FD41B001C93F9 /* MovieDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				53B1A8AE223FCF0B001C93F9 /* Main.storyboard */,
 				53B1A8B1223FCF0C001C93F9 /* Assets.xcassets */,
 				53B1A8B3223FCF0C001C93F9 /* LaunchScreen.storyboard */,
+				53B1A8D8223FD35C001C93F9 /* MovieDataController.swift */,
+				53B1A8DA223FD41B001C93F9 /* MovieDataModel.swift */,
 				53B1A8B6223FCF0C001C93F9 /* Info.plist */,
 			);
 			path = IRDb_NQM;
@@ -261,6 +267,8 @@
 			files = (
 				53B1A8AD223FCF0B001C93F9 /* DetailViewController.swift in Sources */,
 				53B1A8AB223FCF0B001C93F9 /* MasterViewController.swift in Sources */,
+				53B1A8DB223FD41B001C93F9 /* MovieDataModel.swift in Sources */,
+				53B1A8D9223FD35C001C93F9 /* MovieDataController.swift in Sources */,
 				53B1A8A9223FCF0B001C93F9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
