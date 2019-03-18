@@ -5,6 +5,10 @@
 //  Created by Nnamdi Massally on 3/18/19.
 //  Copyright © 2019 Nnamdi Massally. All rights reserved.
 //
+//  No idea what I'm about to be doing on this project :D
+//
+//  Somebody please help me
+//
 
 import UIKit
 
