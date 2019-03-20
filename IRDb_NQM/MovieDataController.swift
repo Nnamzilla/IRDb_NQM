@@ -15,6 +15,26 @@ class MovieDataController: NSObject {
     var dataArray = ["Unexpected item in baggage area"]
     
     var rebootDataModel: MovieDataModel
+  
+    /*
+    let url = "https://restcountries.eu/rest/v2/all"
+    let urlObj = URL(string: url)
+    
+    URLSession.shared.dataTask(with: urlObj!) {(data, response, error) in
+    
+        do {
+            var countries = try JSONDecoder().decode([Country].self, from: data!)
+            for country in countries {
+                print(country.name + " - " + country.capital + " in " + country.region)
+            }
+        } catch {
+            print("We got an error")
+        }
+    
+        }.resume()
+    */
+    
+    
     
     func getRebootData(completion: @escaping (_ success: Bool) -> ()) {
         var success = true
@@ -36,8 +56,14 @@ class MovieDataController: NSObject {
                 
             } else {
                 // we had an error or the data did
+                success = false
             }
+            
+            // call back to the completion handler that was passed in, notifying to do things (we don't care what)
+            completion(success)
         }
+        
+        task.resume()
     }
 
 }
