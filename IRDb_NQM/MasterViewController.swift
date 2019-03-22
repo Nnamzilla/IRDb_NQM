@@ -12,7 +12,7 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
-    let dataGrabber = MovieDataController()
+    let dataController = MovieDataController()
     var rebootDataModel: MovieDataModel? {
         didSet {
             // do the things
@@ -32,21 +32,20 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        // manually set the image for the title bar
+        let titleImage = UIImage(named: "irdblogo")
+        let titleImageView = UIImageView(image: titleImage)
+        navigationItem.titleView = titleImageView
+        
+        // call for the data.
+        dataController.getRebootData(completion: { dataModel in
+            self.rebootDataModel = dataModel
+        })
     }
     
-    // manually set the image for the title bar
-    let titleImage = UIImage(named: "irdblogo")
-    let titleImageView = UIImageView(image: titleImage)
-    navigationItem.titleView = titleImageView
     
-    // call for the data.
-    dataController.getRebootData(completion: {
-        success in self.rebootDataModel = self.dataController.rebootDataModel
-    
-        DispatchQueue.main.async {
-        self.tableView.reloadData()
-    }
-    })
+
 
     override func viewWillAppear(_ animated: Bool) {
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed

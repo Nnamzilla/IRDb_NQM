@@ -8,22 +8,23 @@
 
 import UIKit
 
-class MovieDataModel: NSObject, Codable {
+class MovieDataModel: Codable {
 
-    var franchise: [Franchises]
+    var franchise: [Franchise]
     
-    struct Franchises : Codable {
+    class Franchise : Codable {
         let franchiseName: String
-        let entries: [Entries]
+        let entries: [Entry]
     }
     
-    struct Entries : Codable {
+    class Entry : Codable {
         let name: String
         let format: String
         let yearStart: String
         let yearEnd: String?
         let episodes: Int?
         let studio: String?
+        let network: String?
         let imageURL: String
 //      let description: String
         let summary: String

@@ -16,6 +16,8 @@ class MovieDataController: NSObject {
     
     var rebootDataModel: MovieDataModel
   
+    
+    // random code that might work
     /*
     let url = "https://restcountries.eu/rest/v2/all"
     let urlObj = URL(string: url)
@@ -36,31 +38,24 @@ class MovieDataController: NSObject {
     
     
     
-    func getRebootData(completion: @escaping (_ success: Bool) -> ()) {
-        var success = true
+    func getRebootData(completion: @escaping (_ success: Data) -> ()) {
+        var success = Data()
         
         let trueRL = URL(string: JSONStringo)
         
-        let task = URLSession.shared.dataTask(with: trueRL!) { (data, response, error) in
-            if let _ = data, error == nil {
-                if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
-                    
-                    //getting the characters tag array from json and converting it to NSArray
-                    if let veggieArray = jsonObj!.value(forKey:"characters") as? Array<String> {
-                        self.dataArray = veggieArray
-                        
-                        // printing the json in console
-                        print(jsonObj!.value(forKey: "characters")!)
-                    }
-                }
-                
-            } else {
-                // we had an error or the data did
-                success = false
+        let task = URLSession.shared.dataTask(with: trueRL!) {
+            (data, response, error) in
+            
+            guard let data = data else {
+                return
             }
             
-            // call back to the completion handler that was passed in, notifying to do things (we don't care what)
-            completion(success)
+            success = data
+            
+            DispatchQueue.main.async {
+                completion(success)
+            }
+            
         }
         
         task.resume()
