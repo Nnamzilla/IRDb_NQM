@@ -30,10 +30,10 @@ class DetailViewController: UIViewController {
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = detailItem {
-            if let label = detailDescriptionLabel {
+            if let label = mediaTitle {
                 label.text = detail.name
             }
-            title = detail.name
+            
             if let label = mediaRuntime {
                 if let ended = detail.yearEnd {
                     label.text = "\(detail.yearStart) - \(ended)"

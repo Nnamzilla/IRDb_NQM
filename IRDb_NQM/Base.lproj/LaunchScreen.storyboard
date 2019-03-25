@@ -19,15 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="irdblogo" translatesAutoresizingMaskIntoConstraints="NO" id="uG5-Zi-3EH">
-                                <rect key="frame" x="161" y="320" width="53" height="26"/>
+                                <rect key="frame" x="162" y="321" width="51" height="25"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.76862745098039209" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uG5-Zi-3EH" secondAttribute="bottom" constant="321" id="4MI-ev-DDS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uG5-Zi-3EH" secondAttribute="trailing" constant="161" id="7CV-Kb-VSf"/>
-                            <constraint firstItem="uG5-Zi-3EH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="Hod-Df-cnV"/>
-                            <constraint firstItem="uG5-Zi-3EH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="161" id="ZPa-24-kHB"/>
+                            <constraint firstItem="uG5-Zi-3EH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5De-U0-tjV"/>
+                            <constraint firstItem="uG5-Zi-3EH" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Ym7-XV-xdA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
