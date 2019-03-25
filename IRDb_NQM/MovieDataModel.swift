@@ -26,7 +26,7 @@ class MovieDataModel: Codable {
         let studio: String?
         let network: String?
         let imageURL: String
-//      let description: String
+        let description: String
         let summary: String
     }
     
