@@ -11,10 +11,9 @@ import UIKit
 class MovieDataController: NSObject {
     
     let JSONStringo = "https://api.myjson.com/bins/1e5uji"
+    var dataModel: Any?
     
-    var dataArray = ["Unexpected item in baggage area"]
-    
-    var rebootDataModel: MovieDataModel
+    var rebootDataModel: MovieDataModel?
   
     
     // random code that might work
@@ -38,8 +37,8 @@ class MovieDataController: NSObject {
     
     
     
-    func getRebootData(completion: @escaping (_ success: Data) -> ()) {
-        var success = Data()
+    func getRebootData(completion: @escaping (_ success: MovieDataModel) -> ()) {
+        // var success = Data()
         
         let trueRL = URL(string: JSONStringo)
         
@@ -50,10 +49,22 @@ class MovieDataController: NSObject {
                 return
             }
             
-            success = data
+            do {
+                
+                let decoder = JSONDecoder()
+                let mediaData = try decoder.decode(MovieDataModel.self, from: data)
+                
+                self.dataModel = mediaData
+                
+                
+                
+            } catch let err {
+                print("Err", err)
+            }
             
+            // return to main ther==read
             DispatchQueue.main.async {
-                completion(success)
+                completion(self.dataModel as! MovieDataModel)
             }
             
         }

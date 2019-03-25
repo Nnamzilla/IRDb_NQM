@@ -15,7 +15,14 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-
+    @IBOutlet weak var mediaTitle: UILabel!
+    @IBOutlet weak var mediaRuntime: UILabel!
+    @IBOutlet weak var mediaClassification: UILabel!
+    @IBOutlet weak var mediaEpisodeNum: UILabel!
+    @IBOutlet weak var mediaProducer: UILabel!
+    @IBAction func castList(_ sender: UIButton) {
+    }
+    
 
     func configureView() {
         // Update the user interface for the detail item.
